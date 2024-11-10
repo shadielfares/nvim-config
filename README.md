@@ -22,7 +22,7 @@ To use this configuration, follow these steps:
 
 2. Ensure you have Neovim installed. You can download it from [Neovim's official site](https://neovim.io/).
 
-3. Open Neovim and run `:PackerInstall` to install all the plugins specified in the configuration.
+3. Open Neovim and run `:Lazy install` to install all the plugins specified in the configuration.
 
 ## Features
 
