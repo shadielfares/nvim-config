@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup Lazy.nvim with basic plugin declarations
 require("lazy").setup({
+	
 	-- Theme plugin
 	{ "rose-pine/neovim", name = "rose-pine", lazy = false, priority = 1000 },
 
@@ -29,10 +30,13 @@ require("lazy").setup({
 		})
 	end },
 	-- LSP and autocompletion
-
 	{ "williamboman/mason.nvim" },
-	{ "neovim/nvim-lspconfig" },
-	{ "hrsh7th/nvim-cmp" },
+	{ "williamboman/mason-lspconfig.nvim" },
 	{ "hrsh7th/cmp-nvim-lsp" },
+	{ "hrsh7th/nvim-cmp" },
+	{ "neovim/nvim-lspconfig" },
+	-- TMUX Stuff
+	{ "christoomey/vim-tmux-navigator", lazy = false },
+	{ "github/copilot.vim" }
 })
 
