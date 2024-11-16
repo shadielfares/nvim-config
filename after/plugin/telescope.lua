@@ -9,9 +9,3 @@ vim.keymap.set('n', '<leader>ps', function()
 end, { desc = 'Search string with Telescope' })
 
 -- Additional Telescope setup (if needed)
-require('telescope').setup({
-  defaults = {
-    -- Customize default settings as needed
-  },
-})
-

@@ -34,6 +34,7 @@ require("lazy").setup({
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/nvim-cmp" },
+	{ "hrsh7th/cmp-buffer" },
 	{ "neovim/nvim-lspconfig" },
 	-- TMUX Stuff
 	{ "christoomey/vim-tmux-navigator", lazy = false },
