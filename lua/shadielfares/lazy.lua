@@ -38,6 +38,6 @@ require("lazy").setup({
 	{ "neovim/nvim-lspconfig" },
 	-- TMUX Stuff
 	{ "christoomey/vim-tmux-navigator", lazy = false },
-	-- { "github/copilot.vim" }
+	{ "github/copilot.vim" }
 })
 
