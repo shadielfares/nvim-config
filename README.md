@@ -6,7 +6,7 @@ This repository contains my personal configuration for Neovim, aimed at enhancin
 
 - [Installation](#installation)
 - [Features](#features)
-- [Key Shortcuts](#shortcuts)
+- [Key Shortcuts](#key-shortcuts)
 - [Plugins](#plugins)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
