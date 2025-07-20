@@ -12,4 +12,4 @@ vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move left', silent = true }) --
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move down', silent = true }) -- Ctrl + J to move down
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move up', silent = true })   -- Ctrl + K to move up
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move right', silent = true })-- Ctrl + L to move right
-
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show line diagnostics" })
