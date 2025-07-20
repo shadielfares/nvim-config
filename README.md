@@ -24,7 +24,8 @@ To use this configuration, follow these steps:
 2. Ensure you have Neovim installed. You can download it from [Neovim's official site](https://neovim.io/).
 
 3. Open Neovim and run `:Lazy install` to install all the plugins specified in the configuration.
-4. Sync all installed packages, then source the terminal or simply close the terminal and load it up from scratch.
+4. Additionally run in any terminal: `brew install ripgrep`
+5. Sync all installed packages, then source the terminal or simply close the terminal and load it up from scratch.
 
 ## Features
 
