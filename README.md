@@ -6,6 +6,7 @@ This repository contains my personal configuration for Neovim, aimed at enhancin
 
 - [Installation](#installation)
 - [Features](#features)
+- [Key Shortcuts](#key-shortcuts)
 - [Plugins](#plugins)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
@@ -23,6 +24,8 @@ To use this configuration, follow these steps:
 2. Ensure you have Neovim installed. You can download it from [Neovim's official site](https://neovim.io/).
 
 3. Open Neovim and run `:Lazy install` to install all the plugins specified in the configuration.
+4. Additionally run in any terminal: `brew install ripgrep`
+5. Sync all installed packages, then source the terminal or simply close the terminal and load it up from scratch.
 
 ## Features
 
@@ -32,6 +35,30 @@ To use this configuration, follow these steps:
 - Integrated Git support
 - Syntax highlighting and autocompletion
 - Support for multiple programming languages
+
+## Key Shortcuts
+
+This configuration uses the following key shortcuts for enhanced productivity:
+
+### Leader Key
+- **Leader key**: `Space` (` `) - Used as prefix for custom mappings
+
+### File Navigation
+- **File explorer**: `<leader>pv` (Space then pv) - Opens the file explorer
+- **Telescope file search**: `<ctrl-p>` - Fuzzy finder for files
+- **Telescope live grep**: `<ctrl-f>` - Search text content across files
+
+### Window Navigation
+- **Move left**: `<ctrl-h>` - Navigate to left split
+- **Move down**: `<ctrl-j>` - Navigate to bottom split  
+- **Move up**: `<ctrl-k>` - Navigate to top split
+- **Move right**: `<ctrl-l>` - Navigate to right split
+
+### Tmux Integration
+- **Tmux pane navigation**: `<ctrl-b>` + `h/j/k/l` - Navigate between tmux panes in the same directions (left/down/up/right)
+
+> **Note**: These key mappings are customizable in `lua/shadielfares/remap.lua`
+
 
 ## Plugins
 
