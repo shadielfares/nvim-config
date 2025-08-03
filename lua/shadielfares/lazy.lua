@@ -32,6 +32,18 @@ require("lazy").setup({
 	-- LSP and autocompletion
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
+
+    -- Null-ls for formatting and diagnostics
+    {"nvimtools/none-ls.nvim", dependencies = { "nvim-lua/plenary.nvim" }, config = function()
+        require("null-ls").setup({
+            sources = {
+                require("null-ls").builtins.formatting.prettier.with({
+                    filetypes = { "javascript", "typescript", "html", "css", "json", "jsonc", "markdown" },
+                }),
+                require("null-ls").builtins.formatting.stylua,
+            },
+        })
+    end},
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/nvim-cmp" },
 	{ "hrsh7th/cmp-buffer" },

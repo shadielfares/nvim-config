@@ -13,3 +13,8 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move down', silent = true }) --
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move up', silent = true })   -- Ctrl + K to move up
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move right', silent = true })-- Ctrl + L to move right
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+
+-- Formatting code
+vim.keymap.set('n', '<leader>f', function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = 'Format code with LSP', silent = true })
