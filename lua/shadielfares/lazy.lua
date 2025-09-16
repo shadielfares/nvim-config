@@ -20,6 +20,7 @@ require("lazy").setup({
 
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 	{ "nvim-treesitter/nvim-treesitter-context" },
+    { "tpope/vim-fugitive" },
 	-- File Finder with Telescope
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-telescope/telescope.nvim", event = "BufEnter" },
