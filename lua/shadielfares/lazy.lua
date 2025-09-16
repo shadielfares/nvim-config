@@ -19,6 +19,7 @@ require("lazy").setup({
 	{ "rose-pine/neovim", name = "rose-pine", lazy = false, priority = 1000 },
 
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	{ "nvim-treesitter/nvim-treesitter-context" },
 	-- File Finder with Telescope
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-telescope/telescope.nvim", event = "BufEnter" },
@@ -38,9 +39,12 @@ require("lazy").setup({
         require("null-ls").setup({
             sources = {
                 require("null-ls").builtins.formatting.prettier.with({
-                    filetypes = { "javascript", "typescript", "html", "css", "json", "jsonc", "markdown" },
+                    filetypes = { "javascript", "typescript", "html", "css", "json", "jsonc", "markdown", "yaml", "yml" },
                 }),
                 require("null-ls").builtins.formatting.stylua,
+                require("null-ls").builtins.formatting.black.with({
+                    filetypes = { "python", "py", "python3" },
+                }),
             },
         })
     end},
