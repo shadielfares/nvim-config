@@ -2,6 +2,8 @@
 
 This repository contains my personal configuration for Neovim, aimed at enhancing productivity and customizing the Neovim experience.
 
+`NOTE`: Also added oh-my-zsh as its just nicer
+
 ## Table of Contents
 
 - [Installation](#installation)
