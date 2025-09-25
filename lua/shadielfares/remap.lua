@@ -18,3 +18,6 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show line 
 vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format({ async = true })
 end, { desc = 'Format code with LSP', silent = true })
+
+-- Undotree
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Toggle undotree', silent = true })
