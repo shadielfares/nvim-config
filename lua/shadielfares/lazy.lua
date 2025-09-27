@@ -56,6 +56,7 @@ require("lazy").setup({
 	-- TMUX Stuff
 	{ "christoomey/vim-tmux-navigator", lazy = false },
 	{ "github/copilot.vim" },
-    { "mbbill/undotree" } 
+    { "mbbill/undotree" }, 
+    { 'ThePrimeagen/harpoon' }
 })
 
