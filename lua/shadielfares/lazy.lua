@@ -53,7 +53,7 @@ require("lazy").setup({
 	{ "hrsh7th/nvim-cmp" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "neovim/nvim-lspconfig" },
-	-- TMUX Stuff
+	-- TMUX navigation integration (load immediately so mappings work in both tmux and nvim)
 	{ "christoomey/vim-tmux-navigator", lazy = false },
 	{ "github/copilot.vim" },
     { "mbbill/undotree" }, 
