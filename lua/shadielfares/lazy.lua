@@ -37,13 +37,23 @@ require("lazy").setup({
 
     -- Null-ls for formatting and diagnostics
     {"nvimtools/none-ls.nvim", dependencies = { "nvim-lua/plenary.nvim" }, config = function()
-        require("null-ls").setup({
+        local null_ls = require("null-ls")
+        null_ls.setup({
             sources = {
-                require("null-ls").builtins.formatting.prettier.with({
+                null_ls.builtins.formatting.prettier.with({
                     filetypes = { "javascript", "typescript", "html", "css", "json", "jsonc", "markdown", "yaml", "yml" },
+                    prefer_local = "node_modules/.bin",
+                    -- Only use prettier when a config file exists in project root
+                    -- Prettier will automatically find and use .prettierrc when run from project root
+                    condition = function(utils)
+                        -- Check for .prettierrc files (with or without extension)
+                        -- Pattern .prettierrc* matches .prettierrc, .prettierrc.json, .prettierrc.js, etc.
+                        return utils.root_has_file_matches(".prettierrc*") or 
+                               utils.root_has_file_matches("prettier.config.*")
+                    end,
                 }),
-                require("null-ls").builtins.formatting.stylua,
-                require("null-ls").builtins.formatting.black.with({
+                null_ls.builtins.formatting.stylua,
+                null_ls.builtins.formatting.black.with({
                     filetypes = { "python", "py", "python3" },
                 }),
             },
