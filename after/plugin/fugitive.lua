@@ -12,16 +12,22 @@ vim.keymap.set("n", "<leader>gd", ":Gdiffsplit<CR>", { desc = "Git diff split" }
 vim.keymap.set("n", "<leader>gD", ":Gvdiffsplit<CR>", { desc = "Git vertical diff split" })
 vim.keymap.set("n", "<leader>gv", ":Git! --no-pager log --oneline --graph --all<CR>", { desc = "Git log graph" })
 
--- Conflict resolution (use in diff view opened with :Gdiffsplit)
--- In the diff view, use these commands:
+-- Conflict resolution (use in merge conflict diff view opened with :Gdiffsplit)
+-- In merge conflict diff view, use these commands:
 -- 'co' - choose ours (your version)
 -- 'ct' - choose theirs (incoming version)  
 -- 'cb' - choose base (common ancestor)
 -- 'ca' - choose all (keep both changes)
-vim.keymap.set("n", "<leader>gco", "co", { desc = "Choose ours in diff view", buffer = true })
-vim.keymap.set("n", "<leader>gct", "ct", { desc = "Choose theirs in diff view", buffer = true })
-vim.keymap.set("n", "<leader>gcb", "cb", { desc = "Choose base in diff view", buffer = true })
-vim.keymap.set("n", "<leader>gca", "ca", { desc = "Choose all in diff view", buffer = true })
+vim.keymap.set("n", "<leader>gco", "co", { desc = "Choose ours in conflict diff view", buffer = true })
+vim.keymap.set("n", "<leader>gct", "ct", { desc = "Choose theirs in conflict diff view", buffer = true })
+vim.keymap.set("n", "<leader>gcb", "cb", { desc = "Choose base in conflict diff view", buffer = true })
+vim.keymap.set("n", "<leader>gca", "ca", { desc = "Choose all in conflict diff view", buffer = true })
+
+-- Regular diff view operations (for non-conflict diffs)
+-- 'dp' - diff put (put change from other side into current buffer)
+-- 'do' - diff obtain (get change from other side)
+vim.keymap.set("n", "<leader>gdp", "dp", { desc = "Diff put - take change from other side", buffer = true })
+vim.keymap.set("n", "<leader>gdo", "do", { desc = "Diff obtain - get change from other side", buffer = true })
 
 -- Refresh diff view
 vim.keymap.set("n", "<leader>gR", ":Gdiffsplit!<CR>", { desc = "Refresh diff view" })
