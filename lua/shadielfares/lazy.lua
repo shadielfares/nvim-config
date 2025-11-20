@@ -65,7 +65,7 @@ require("lazy").setup({
 	{ "neovim/nvim-lspconfig" },
 	-- TMUX navigation integration (load immediately so mappings work in both tmux and nvim)
 	{ "christoomey/vim-tmux-navigator", lazy = false },
-	{ "github/copilot.vim" },
+	-- { "github/copilot.vim" },
     { "mbbill/undotree" }, 
     { 'ThePrimeagen/harpoon' }
 })
