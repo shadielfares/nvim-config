@@ -21,3 +21,6 @@ end, { desc = 'Format code with LSP', silent = true })
 
 -- Undotree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Toggle undotree', silent = true })
+
+-- Code Actions
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'For the Fix Available Messages', silent = true })
