@@ -1,6 +1,14 @@
 -- LSP setup
 ---
 
+vim.api.nvim_create_user_command('LspRestartReal', function()
+    for _, client in ipairs(vim.lsp.get_clients()) do
+        if client.name ~= 'null-ls' then
+            vim.cmd('LspRestart ' .. client.name)
+        end
+    end
+end, { desc = 'Restart LSP servers excluding null-ls' })
+
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
 vim.opt.signcolumn = 'yes'
