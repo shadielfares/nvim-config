@@ -31,7 +31,7 @@ vim.opt.updatetime = 50
 -- Folding
 -- Use Treesitter for folding when available
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 -- Keep folds open by default; adjust to taste
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
