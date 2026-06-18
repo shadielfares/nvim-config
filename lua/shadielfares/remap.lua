@@ -24,3 +24,6 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Toggle undotr
 
 -- Code Actions
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'For the Fix Available Messages', silent = true })
+
+-- Folding
+vim.keymap.set('n', 'tt', 'za', { desc = 'Toggle fold under cursor', silent = true })
