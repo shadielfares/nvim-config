@@ -27,3 +27,11 @@ vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'For the Fix
 
 -- Folding
 vim.keymap.set('n', 'tt', 'za', { desc = 'Toggle fold under cursor', silent = true })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "lua", "python" },
+  callback = function()
+    vim.opt_local.foldmethod = "expr"
+    vim.opt_local.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+  end,
+})
